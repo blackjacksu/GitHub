@@ -1,0 +1,58 @@
+[
+  {
+    "id": "housing",
+    "name": "Housing",
+    "order": 1,
+    "optional": false,
+    "question": "Where do I live?",
+    "depth": "v1"
+  },
+  {
+    "id": "commute",
+    "name": "Commute & driving",
+    "order": 2,
+    "optional": false,
+    "question": "How do I move around, and do I need a car?",
+    "depth": "v1"
+  },
+  {
+    "id": "friends",
+    "name": "Friends",
+    "order": 3,
+    "optional": false,
+    "question": "How do I stop being alone here?",
+    "depth": "v1"
+  },
+  {
+    "id": "food",
+    "name": "Food",
+    "order": 4,
+    "optional": false,
+    "question": "Where do I eat on a Tuesday?",
+    "depth": "later"
+  },
+  {
+    "id": "play",
+    "name": "Play",
+    "order": 5,
+    "optional": false,
+    "question": "What do I do with a free evening?",
+    "depth": "later"
+  },
+  {
+    "id": "weekends",
+    "name": "Weekends",
+    "order": 6,
+    "optional": false,
+    "question": "What do I do with two whole days?",
+    "depth": "later"
+  },
+  {
+    "id": "career",
+    "name": "Career",
+    "order": 7,
+    "optional": true,
+    "question": "What happens after the job that brought me here?",
+    "depth": "later"
+  }
+]

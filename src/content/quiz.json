@@ -1,0 +1,88 @@
+[
+  {
+    "id": "car",
+    "prompt": "Will you have a car here?",
+    "fork": true,
+    "note": "In most cities this is a utility question. In Boston it decides your rent, your neighborhood, your weekends, and who you end up knowing. So it goes first.",
+    "options": [
+      {
+        "label": "No, and I don't want one",
+        "weights": { "the-local": 3, "the-rebuilder": 1, "the-optimizer": 1 }
+      },
+      {
+        "label": "Yes, I'm bringing one",
+        "weights": { "the-explorer": 3, "the-optimizer": 1 }
+      },
+      {
+        "label": "I could go either way",
+        "weights": { "the-optimizer": 2, "the-rebuilder": 2 }
+      }
+    ]
+  },
+  {
+    "id": "saturday",
+    "prompt": "A good Saturday, six months from now.",
+    "options": [
+      {
+        "label": "I never got in a vehicle",
+        "weights": { "the-local": 3 }
+      },
+      {
+        "label": "I was two hours north by 9am",
+        "weights": { "the-explorer": 3 }
+      },
+      {
+        "label": "I saw the same few people I always see",
+        "weights": { "the-optimizer": 2, "the-rebuilder": 2 }
+      },
+      {
+        "label": "I met someone new and it wasn't excruciating",
+        "weights": { "the-rebuilder": 3 }
+      }
+    ]
+  },
+  {
+    "id": "fear",
+    "prompt": "What are you actually worried about?",
+    "options": [
+      {
+        "label": "That I won't know anyone",
+        "weights": { "the-rebuilder": 3, "the-local": 1 }
+      },
+      {
+        "label": "That I'll spend my life commuting",
+        "weights": { "the-optimizer": 3 }
+      },
+      {
+        "label": "That it'll be small and I'll be bored",
+        "weights": { "the-explorer": 3 }
+      },
+      {
+        "label": "That I'll live here for years and still feel like a visitor",
+        "weights": { "the-local": 3, "the-rebuilder": 1 }
+      }
+    ]
+  },
+  {
+    "id": "success",
+    "prompt": "One year in, the thing that would tell you it worked.",
+    "options": [
+      {
+        "label": "Somewhere near me knows my order",
+        "weights": { "the-local": 3 }
+      },
+      {
+        "label": "Four or five people I can text at 6 and see at 7",
+        "weights": { "the-optimizer": 2, "the-rebuilder": 2 }
+      },
+      {
+        "label": "A thing I do every weekend that I'd defend",
+        "weights": { "the-explorer": 3 }
+      },
+      {
+        "label": "My week has a shape to it",
+        "weights": { "the-optimizer": 3, "the-rebuilder": 1 }
+      }
+    ]
+  }
+]
