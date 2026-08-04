@@ -28,8 +28,18 @@ receipt — escalating to the human only at the moments that genuinely require a
 | [`docs/04-architecture.md`](docs/04-architecture.md) | System design and the core data model |
 | [`docs/05-roadmap.md`](docs/05-roadmap.md) | The executable plan — phases, MVP scope, success metrics |
 | [`docs/06-open-questions.md`](docs/06-open-questions.md) | Decisions that need your input |
+| [`docs/07-decisions.md`](docs/07-decisions.md) | **Decision log** — what's settled and what it rules out |
+| [`docs/08-phase-0-worksheet.md`](docs/08-phase-0-worksheet.md) | 👉 **Start here in practice** — the worksheet for your next real call |
 | [`examples/electricity-high-bill.md`](examples/electricity-high-bill.md) | A concrete sample output, using your own example |
 | [`examples/case-schema.yaml`](examples/case-schema.yaml) | The machine-readable shape of a case |
+
+## Decisions so far
+
+- **Personal tool first** — product question deferred to the Phase 3 fork point
+- **Electricity + gas first** — best API coverage, lightest compliance load
+- **Identifiers-only vault**, built with per-field sensitivity so portal credentials stay possible
+
+See [`docs/07-decisions.md`](docs/07-decisions.md).
 
 ## The headline conclusion
 
