@@ -1,0 +1,136 @@
+# Case File — canonical shape
+#
+# One per user-problem, from intake to resolution. This is the object every part of the
+# system reads and writes. Values shown are the worked example from
+# examples/electricity-high-bill.md.
+#
+# Convention: anything of the form vault:<key> is a REFERENCE, never a value. Real values
+# live encrypted in the vault and are substituted deterministically at delivery time,
+# outside the model. See docs/04-architecture.md § guardrail layer.
+
+case:
+  id: 481
+  user_id: usr_9f2a
+  created_at: 2026-08-04T10:22:00Z
+  state: READY          # DRAFT READY IN_PROGRESS AWAITING_PROVIDER NEEDS_USER
+                        # PROMISE_BROKEN ESCALATED RESOLVED ABANDONED
+
+  provider:
+    id: prv_pge
+    display_name: Pacific Gas & Electric
+    vertical: utility_electric
+    region: CA
+
+  issue:
+    user_words: "my electricity bill is way higher than usual this month"
+    our_label: billing.unexpected_increase
+    their_label: "High Bill Investigation"     # from provider.issue_taxonomy
+    rights_basis: "CPUC GO 96-B billing dispute; right to meter test/re-read"
+
+  goal:
+    statement: >-
+      Obtain a meter re-read for the July 2026 billing period and a written daily-usage
+      breakdown; re-bill on the actual read if it comes back lower than the estimate.
+    acceptable_outcomes:
+      - meter re-read scheduled with a confirmation number
+      - written interval data provided for the disputed period
+      - bill corrected or adjusted
+      - payment arrangement offered if the charge stands
+    walk_away: >-
+      If no re-read is granted and no written explanation is offered after supervisor
+      escalation, file a CPUC complaint rather than continuing by phone.
+
+  # ---- Facts: vault refs, never literals -----------------------------------
+  facts:
+    account_number:   vault:accounts.prv_pge.number
+    holder_name:      vault:person.legal_name
+    service_address:  vault:accounts.prv_pge.service_address
+    dob:              vault:person.dob
+    ssn_last4:        vault:person.ssn_last4
+    billing_period:   "2026-07-01/2026-08-03"
+
+  # ---- Evidence: documents + computed findings ------------------------------
+  evidence:
+    documents:
+      - { id: doc_7741, type: utility_bill, period: 2026-07, parsed: true }
+      - { id: doc_7602, type: utility_bill, period: 2026-06, parsed: true }
+      - { id: doc_6088, type: utility_bill, period: 2025-07, parsed: true }
+    findings:
+      - id: f1
+        severity: high
+        claim: "July 2026 meter read was ESTIMATED, not actual"
+        source: doc_7741.read_type
+        leverage: "Strongest single argument; makes a re-read request hard to refuse"
+      - id: f2
+        severity: medium
+        claim: "Billing period was 34 days vs typical 30 (+13%)"
+        source: doc_7741.period_days
+      - id: f3
+        severity: medium
+        claim: "Rate plan changed E-1 -> E-TOU-C since Jul 2025"
+        source: "doc_6088.rate_plan != doc_7741.rate_plan"
+        leverage: "Invalidates the naive year-over-year comparison; ask if opt-in"
+    computed:
+      pct_vs_prior_month: 238
+      pct_vs_year_ago: 204
+      kwh_delta: +743
+
+  # ---- The consent ledger: what may be disclosed, to whom, until when -------
+  authorization:
+    mode: SCRIPT_ONLY       # SCRIPT_ONLY | COPILOT | HOLD_AND_HANDOFF | DELEGATED
+    third_party_status: none          # none | pending | active
+    disclosable_fields:
+      - { field: person.legal_name,          to: prv_pge, granted_at: 2026-08-04T10:24:00Z }
+      - { field: accounts.prv_pge.number,    to: prv_pge, granted_at: 2026-08-04T10:24:00Z }
+      - { field: person.dob,                 to: prv_pge, granted_at: 2026-08-04T10:24:00Z }
+      - { field: person.ssn_last4,           to: prv_pge, granted_at: 2026-08-04T10:24:00Z }
+    prohibited_actions:
+      - commit_payment
+      - accept_settlement
+      - cancel_or_modify_service
+      - claim_to_be_the_account_holder      # rule R1, never overridable
+    expires_at: 2026-09-04T00:00:00Z
+
+  # ---- Plan produced by the planner ----------------------------------------
+  plan:
+    channel: SCRIPT
+    fallback_channel: SCRIPT              # every channel degrades to this
+    contact_point: { type: phone, value: prv_pge.billing_main }
+    ivr_path: ["1", "3", "0", "0", "0"]
+    best_window: "Mon-Fri 07:00-08:30 America/Los_Angeles"
+    asks_in_priority_order:
+      - meter_re_read
+      - written_daily_usage_breakdown
+      - rebill_on_actual
+      - rate_plan_analysis
+      - payment_arrangement                # only if the charge stands
+    escalation_ladder:
+      - { rung: 1, target: supervisor }
+      - { rung: 2, target: billing_escalations }
+      - { rung: 3, target: cpuc_complaint, external: true }
+
+  # ---- History -------------------------------------------------------------
+  attempts: []
+    # - channel: SCRIPT
+    #   started_at: 2026-08-05T15:10:00Z
+    #   duration_s: 1080
+    #   hold_s: 840
+    #   outcome: partial
+    #   transcript_ref: txn_2291        # PII re-redacted to placeholders on store
+
+  receipt:
+    reference_number: null
+    rep_name: null
+    promise: null
+    promised_by: null
+    verified_at: null
+
+  next_action: "User places call using generated script"
+  next_action_due: 2026-08-06T00:00:00Z
+
+  # ---- Written back to the provider playbook on completion -----------------
+  playbook_writeback:
+    ivr_path_worked: null
+    observed_hold_s: null
+    auth_fields_requested: null
+    escalation_phrase_effective: null
