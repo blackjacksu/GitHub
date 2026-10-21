@@ -9,3 +9,8 @@
 - Off-chain attestation revocation mechanism (§3 step 4) is unspecified.
 - Dispute state machine is reasonable. Specify the bond refund rules for Split rulings and the appeal bond size. Add four-eyes review for human rulings (insider threat).
 - Good: both-sided direction-specific counters; versioned scoring; fixtures as the test contract.
+
+## From the landscape research
+- R3: the literature says symmetric weighted sums are sybil-manipulable by construction; prefer seed-anchored, cycle-netted, cluster-capped volume credit; a time-decayed Beta with confidence shrinkage for disputes; stake as a per-band gate scaled to the order limit. Volume is the most-faked signal in every market measured (>70% wash volume on unregulated exchanges).
+- R4: Kleros v2's Agentic Commerce Court (Aug 2026) is a ready-made bonded appeal layer; evaluate it for the HumanReview/Appeal states before building an in-house tribunal.
+- Score scale: RNWY (50–95), AXIS (AAA–D) and others already publish scores; document a mapping so integrators can compare.
