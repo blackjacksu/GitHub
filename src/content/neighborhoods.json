@@ -1,0 +1,146 @@
+[
+  {
+    "id": "jamaica-plain",
+    "name": "Jamaica Plain",
+    "blurb": "The classic answer for people who want to be rooted rather than central. Centre Street is a real main street you can walk end to end, the Arboretum and Jamaica Pond give you a default loop, and the Orange Line gets you downtown without drama. It has gentrified hard and it knows it. If you want to become a regular somewhere, this is the easiest place in the city to do it.",
+    "walkability": 5,
+    "carFriendliness": 3,
+    "goodForModes": ["the-local", "the-rebuilder"]
+  },
+  {
+    "id": "somerville-davis",
+    "name": "Davis Square, Somerville",
+    "blurb": "Dense, young, and walkable, with the Red Line to Harvard and Kendall in minutes and the community path for running and biking. It is the most convenient place on this list for a Cambridge job, which is exactly why the rent reflects that. Expect a lot of neighbors in the same life stage as you, which cuts both ways.",
+    "walkability": 5,
+    "carFriendliness": 2,
+    "goodForModes": ["the-local", "the-optimizer"]
+  },
+  {
+    "id": "somerville-union",
+    "name": "Union Square, Somerville",
+    "blurb": "Scrappier and better for eating than Davis, and now on the Green Line Extension, which changed the math on living here. Still enough small businesses and odd corners that it feels like a place rather than an amenity. Good if you want a neighborhood you can be early to rather than one that has already been decided.",
+    "walkability": 4,
+    "carFriendliness": 2,
+    "goodForModes": ["the-local", "the-rebuilder"]
+  },
+  {
+    "id": "cambridge-central",
+    "name": "Central Square, Cambridge",
+    "blurb": "The last genuinely mixed part of Cambridge: music venues, cheap food, students, lifers, and a fair amount of visible hard living. Red Line access is excellent and you can walk to both Harvard and MIT. If you want to be in the middle of things and are not precious about polish, this is the spot.",
+    "walkability": 5,
+    "carFriendliness": 2,
+    "goodForModes": ["the-optimizer", "the-rebuilder"]
+  },
+  {
+    "id": "cambridge-inman",
+    "name": "Inman Square, Cambridge",
+    "blurb": "Quieter than Central, denser than Somerville, and stranded between subway stops in a way that keeps it slightly under-loved. You will bike or bus. In exchange you get a small, walkable core where the same faces show up, which is most of the point.",
+    "walkability": 4,
+    "carFriendliness": 2,
+    "goodForModes": ["the-local", "the-optimizer"]
+  },
+  {
+    "id": "allston",
+    "name": "Allston",
+    "blurb": "Cheap by Boston standards, loud, and heavily student. The food is genuinely excellent and the turnover is brutal, so the population resets every year. Good for a first landing while you figure out what you actually want. Harder to build a rooted life in, because everyone around you is leaving.",
+    "walkability": 4,
+    "carFriendliness": 2,
+    "goodForModes": ["the-rebuilder"]
+  },
+  {
+    "id": "south-boston",
+    "name": "South Boston",
+    "blurb": "Beaches, a grid you can actually park in by Boston standards, and a young professional population that arrived all at once. The old Southie and the new one coexist uneasily. Transit is a weak point away from the Red Line, so this works much better with a car or a bike.",
+    "walkability": 4,
+    "carFriendliness": 4,
+    "goodForModes": ["the-optimizer", "the-explorer"]
+  },
+  {
+    "id": "east-boston",
+    "name": "East Boston",
+    "blurb": "The best waterfront views in the city and, still, some of the better value. The Blue Line is fast and reliable and underrated. It is a real immigrant neighborhood with real food, changing quickly along the harbor. The tunnel makes it feel further from the rest of the city than it is.",
+    "walkability": 4,
+    "carFriendliness": 3,
+    "goodForModes": ["the-local", "the-rebuilder"]
+  },
+  {
+    "id": "roslindale",
+    "name": "Roslindale",
+    "blurb": "Rosi Square, a farmers market, the Arboretum on your doorstep, and prices that still make sense. Commuter rail downtown is quick; the bus to Forest Hills is the everyday reality. Quieter and more family-shaped than JP. A good answer if you want a life that repeats.",
+    "walkability": 4,
+    "carFriendliness": 4,
+    "goodForModes": ["the-local", "the-explorer"]
+  },
+  {
+    "id": "dorchester",
+    "name": "Dorchester",
+    "blurb": "Not one neighborhood but a dozen, and generalizing about it is the surest sign someone has not spent time there. Savin Hill, Fields Corner, and Ashmont each have their own character and their own Red Line stop. The most house-for-your-money inside the city line.",
+    "walkability": 3,
+    "carFriendliness": 4,
+    "goodForModes": ["the-explorer", "the-rebuilder"]
+  },
+  {
+    "id": "charlestown",
+    "name": "Charlestown",
+    "blurb": "Small, hilly, historic, and quietly self-contained. Close enough to walk downtown over the bridge, insular enough that you will notice you are new. Orange Line at Sullivan and the ferry are both real options. Good if you want a village attached to a city.",
+    "walkability": 4,
+    "carFriendliness": 3,
+    "goodForModes": ["the-local"]
+  },
+  {
+    "id": "brookline",
+    "name": "Brookline",
+    "blurb": "Technically not Boston, functionally very much in it. Coolidge Corner and Washington Square are walkable and pleasant, the schools are the reason many people are there, and the Green Line is slow but goes where you need. You pay for all of this.",
+    "walkability": 4,
+    "carFriendliness": 3,
+    "goodForModes": ["the-optimizer"]
+  },
+  {
+    "id": "medford",
+    "name": "Medford",
+    "blurb": "Green Line Extension opened this up considerably. You get more space, the Mystic River, and the Fells within reach, at a price that has not fully caught up. Less of a walkable center than Somerville, more of a place you drive out of on a Saturday.",
+    "walkability": 3,
+    "carFriendliness": 4,
+    "goodForModes": ["the-explorer", "the-optimizer"]
+  },
+  {
+    "id": "malden",
+    "name": "Malden",
+    "blurb": "Orange Line terminus, genuinely diverse, genuinely cheaper, and increasingly the honest answer for people priced out of Somerville. Downtown Malden is compact and improving. You are trading some walkable charm for square footage and a parking spot.",
+    "walkability": 3,
+    "carFriendliness": 4,
+    "goodForModes": ["the-explorer", "the-rebuilder"]
+  },
+  {
+    "id": "arlington",
+    "name": "Arlington",
+    "blurb": "No subway, which is the whole story. In exchange: the Minuteman bikeway, Spy Pond, a real Massachusetts Avenue with actual shops, and quiet. Bus or bike to Alewife. Works well for people whose weekends point outward rather than downtown.",
+    "walkability": 3,
+    "carFriendliness": 4,
+    "goodForModes": ["the-explorer"]
+  },
+  {
+    "id": "watertown",
+    "name": "Watertown",
+    "blurb": "Also no subway, also fine about it. The Charles path, an old Armenian community with the food to match, and easy driving access to Route 2 and the Pike. This is a car neighborhood that does not feel like a suburb.",
+    "walkability": 3,
+    "carFriendliness": 5,
+    "goodForModes": ["the-explorer"]
+  },
+  {
+    "id": "quincy",
+    "name": "Quincy",
+    "blurb": "Red Line to downtown, ocean at the edge, and prices that let you have a parking space and a spare room. Far enough that spontaneity gets harder, which matters more than people expect when they are new and building a social life from zero.",
+    "walkability": 3,
+    "carFriendliness": 5,
+    "goodForModes": ["the-explorer"]
+  },
+  {
+    "id": "south-end",
+    "name": "South End",
+    "blurb": "Brownstones, restaurants, and the highest density of people who look like they are having a nice time. Very walkable, very expensive, and thinner on the kind of casual recurring gathering that turns a neighborhood into a home. Beautiful place to live, harder place to get adopted.",
+    "walkability": 5,
+    "carFriendliness": 2,
+    "goodForModes": ["the-optimizer"]
+  }
+]

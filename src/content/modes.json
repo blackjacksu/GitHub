@@ -1,0 +1,139 @@
+[
+  {
+    "id": "the-local",
+    "name": "The Local",
+    "tagline": "Small world, deep roots.",
+    "description": "You want to disappear into a neighborhood. Not the city — a neighborhood. You want a coffee place that starts your order when you walk in, a bar where you can arrive alone on a Tuesday, a walk you take so often you stop noticing it. You would rather know forty people within a mile than four hundred across the metro. Boston is unusually good at this, because it is really a stack of small towns that happen to touch, and the small towns still behave like small towns.",
+    "carDefault": "no",
+    "weekendRadius": "small",
+    "homeSource": "A place, through repetition",
+    "neighborhoodIds": [
+      "jamaica-plain",
+      "somerville-union",
+      "east-boston",
+      "roslindale",
+      "cambridge-inman",
+      "somerville-davis",
+      "charlestown"
+    ],
+    "rhythmIds": [
+      "neighborhood-trivia",
+      "farmers-market-regular",
+      "pickup-basketball",
+      "library-events",
+      "bar-shift-regular"
+    ],
+    "needSummaries": {
+      "housing": "Pick the neighborhood first and the apartment second — you are optimizing for a ten-minute walking radius, not square footage. Being on a main street beats being on a nice quiet block.",
+      "commute": "No car. Plan on the subway, a bike, and a willingness to occasionally spend forty minutes going five miles. Your life is designed so that most trips are on foot.",
+      "friends": "Yours come from being seen repeatedly in the same place. Slower to start than an app, far stickier once it takes. Pick two places and become furniture.",
+      "food": "You need four or five everyday places within walking distance, not a list of the city's best restaurants. Ranked lists are the enemy of becoming a regular.",
+      "play": "Whatever is walkable: a neighborhood bar's trivia night, the local branch library, a park with a court in it. The constraint is the feature.",
+      "weekends": "Small radius on purpose. The Arboretum, the Harborwalk, a long slow errand loop. You are trying to build a Saturday that repeats, not a Saturday that impresses.",
+      "career": "Your job is probably why you are here. Worth knowing that in Boston the professional world is small and reputational, and your neighborhood life and your work life rarely overlap."
+    }
+  },
+  {
+    "id": "the-optimizer",
+    "name": "The Optimizer",
+    "tagline": "Short commute, sharp week, tight circle.",
+    "description": "You came for the work, and the work is good. You would like the rest of your life to not fight you about it. That means a commute you do not resent, a neighborhood that handles logistics well, and a social life that runs on a schedule rather than on luck. You are not looking for forty acquaintances. You want four or five people you can text at six and see at seven.",
+    "carDefault": "either",
+    "weekendRadius": "medium",
+    "homeSource": "A rhythm, plus a tight group",
+    "neighborhoodIds": [
+      "somerville-davis",
+      "cambridge-central",
+      "cambridge-inman",
+      "brookline",
+      "south-boston",
+      "south-end",
+      "medford"
+    ],
+    "rhythmIds": [
+      "run-club",
+      "climbing-gym-regular",
+      "rec-league",
+      "neighborhood-trivia",
+      "language-or-skill-class"
+    ],
+    "needSummaries": {
+      "housing": "Draw your commute constraint first, then look inside it. In Boston the difference between a 20 and a 45 minute commute is often two subway stops and a lot of rent — decide honestly which you are buying.",
+      "commute": "This is your fork. Kendall, Longwood, and the Seaport each have a completely different right answer, and the wrong one costs you an hour a day for a year.",
+      "friends": "Recurring, scheduled, low-negotiation. A league, a gym, a class — something already on the calendar so nobody has to organize it. This is the format that survives a busy job.",
+      "food": "Two good weeknight places near home, one near work, and a delivery habit you are not ashamed of. That is genuinely enough.",
+      "play": "Things that fit in a weeknight and start at a known time. Boston is very good at this and very bad at spontaneity after 10pm.",
+      "weekends": "Medium radius. The coast, the Blue Hills, Providence, Portland. Far enough to feel like leaving, close enough that you are home Sunday evening.",
+      "career": "The reason you are here, and the thing most likely to move you. Boston's tech, bio, and academic worlds are small and interconnected — people remember you."
+    }
+  },
+  {
+    "id": "the-explorer",
+    "name": "The Explorer",
+    "tagline": "The city is the basecamp.",
+    "description": "You did not move to Boston for Boston. You moved for what is around it: the White Mountains two and a half hours north, the Cape, the Berkshires, Maine, a coastline with actual towns on it. The city is where your stuff lives and where you recover between trips. You will trade walkability for a driveway and a shorter merge onto the highway, and you will not regret it.",
+    "carDefault": "yes",
+    "weekendRadius": "large",
+    "homeSource": "A weekend ritual",
+    "neighborhoodIds": [
+      "arlington",
+      "watertown",
+      "medford",
+      "roslindale",
+      "malden",
+      "dorchester",
+      "quincy"
+    ],
+    "rhythmIds": [
+      "hiking-group",
+      "run-club",
+      "ski-bus-or-carpool",
+      "farmers-market-regular",
+      "climbing-gym-regular"
+    ],
+    "needSummaries": {
+      "housing": "Optimize for parking and highway access, not for a subway stop. Somewhere off Route 2, 93, or the Pike will save you more weekend hours than any amount of walkability.",
+      "commute": "You have a car and it is the right call. Understand resident permits, street cleaning, and the winter parking ban before they teach you the hard way.",
+      "friends": "The trap of this mode: your best days happen outside the city with people you may not see midweek. Anchor at least one recurring thing inside Boston so your social life is not entirely dependent on a car and good weather.",
+      "food": "You will eat a lot of gas station coffee at 6am. In the city, prioritize places that are open late enough for you to get back to.",
+      "play": "Mostly outside city limits. Inside it, the Fells, the Blue Hills, and the Charles carry more weight than the bar scene.",
+      "weekends": "The main event. Two-and-a-half hours gets you the Whites, the Berkshires, Acadia's little brothers, and most of the good coastline. Build the ritual, not the bucket list.",
+      "career": "Boston will not be short of work. The question is whether your job respects a Friday afternoon departure."
+    }
+  },
+  {
+    "id": "the-rebuilder",
+    "name": "The Rebuilder",
+    "tagline": "New chapter, and you need people fast.",
+    "description": "You are not just relocating, you are restarting. A breakup, a graduation, a career change, a decision to stop being who you were somewhere else. You do not have four years to let this happen naturally, and you know it. The plan has to be deliberate: put yourself in front of the same people every week until some of them become yours. It will feel forced for about six weeks and then it will not.",
+    "carDefault": "either",
+    "weekendRadius": "medium",
+    "homeSource": "A small group, plus a rhythm",
+    "neighborhoodIds": [
+      "somerville-union",
+      "jamaica-plain",
+      "cambridge-central",
+      "allston",
+      "east-boston",
+      "malden",
+      "dorchester"
+    ],
+    "rhythmIds": [
+      "run-club",
+      "neighborhood-trivia",
+      "volunteer-shift",
+      "language-or-skill-class",
+      "rec-league",
+      "library-events"
+    ],
+    "needSummaries": {
+      "housing": "Roommates, or a building with a lobby, or a neighborhood with a busy main street. Living alone on a quiet block is the single most common mistake in this mode.",
+      "commute": "Prefer being on a subway line over having a car, at least the first year. Spontaneity matters more to you right now than range.",
+      "friends": "The whole task. Commit to two recurring things and go to each of them four times before you evaluate. Almost everyone quits at visit one or two, which is exactly why it works.",
+      "food": "Sit at the bar. Alone. Order the same thing. This sounds like nothing and it is not nothing.",
+      "play": "Choose activities with a fixed time and a returning cast over ones that are simply fun. The cast is the point.",
+      "weekends": "The dangerous stretch. An unscheduled Saturday and Sunday is where the loneliness lives — put one anchor in each weekend before the weekend arrives.",
+      "career": "If the job is also new, be careful not to let it become your only source of people. It is the most fragile kind of social life there is."
+    }
+  }
+]

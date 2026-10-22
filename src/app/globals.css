@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/*
+ * Warm paper, ink, and a brick red borrowed from every triple-decker in the
+ * city. The site should read like something a person wrote, not like a
+ * relocation service.
+ */
+:root {
+  --background: #fbf8f3;
+  --surface: #ffffff;
+  --surface-sunken: #f3ede4;
+  --foreground: #17191f;
+  --muted: #5f6572;
+  --border: #e2d9cc;
+  --brick: #a4432e;
+  --brick-soft: #f6e7e2;
+  --harbor: #2a4a5b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101218;
+    --surface: #181b23;
+    --surface-sunken: #14161d;
+    --foreground: #ece7de;
+    --muted: #9aa1b0;
+    --border: #2a2e39;
+    --brick: #e08265;
+    --brick-soft: #2a1d1a;
+    --harbor: #8fb6c9;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-sunken: var(--surface-sunken);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-brick: var(--brick);
+  --color-bricksoft: var(--brick-soft);
+  --color-harbor: var(--harbor);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Long-form markdown coming out of src/content/need-content. */
+.prose > * + * {
+  margin-top: 1.15em;
+}
+
+.prose h3 {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.2em;
+}
+
+.prose h4 {
+  font-weight: 600;
+  margin-top: 1.8em;
+}
+
+.prose p,
+.prose li {
+  line-height: 1.75;
+}
+
+.prose ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.prose ul > * + * {
+  margin-top: 0.5em;
+}
+
+.prose strong {
+  font-weight: 650;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose a {
+  color: var(--brick);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
