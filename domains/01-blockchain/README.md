@@ -1,0 +1,12 @@
+# 01 — Blockchain survey and recommendation
+
+| | |
+|---|---|
+| Spec | [`01-BLOCKCHAIN-SURVEY.md`](./01-BLOCKCHAIN-SURVEY.md) (v0.1, 2026-10-21) |
+| Workstream | WS0 |
+| Owner / audience | Architect |
+| Depends on | — |
+| Status | Spec filed, under review. Not yet delegated. |
+
+Review notes for this domain live in [`REVIEW.md`](./REVIEW.md) once the architecture review lands.
+Delegation brief (from `10-WORKSTREAMS-AND-DELEGATION.md` §3) will be added as `BRIEF.md` when this workstream is handed to an implementer.
